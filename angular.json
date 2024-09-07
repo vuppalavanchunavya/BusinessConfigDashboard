@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/env-dashboard-frontend",
+            "outputPath": "../public",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -60,6 +60,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "proxyConfig": "proxy.conf.json"
+          },
           "configurations": {
             "production": {
               "buildTarget": "env-dashboard-frontend:build:production"

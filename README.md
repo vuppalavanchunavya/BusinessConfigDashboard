@@ -25,3 +25,41 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+---
+
+
+This JSON structure should define the fields for the .env form generation. It should dynamically generate the form based on this JSON. To update the JSON file based on form changes, It should capture the form data and write it back to the JSON file on the server side.
+
+{
+  "envFieldsModel": [
+    {
+      "name": "ENV_VARIABLE_NAME",
+      "type": "text",
+      "required": true,
+      "placeholder": "Enter variable name",
+      defaultValue: "",
+      currentValue: ""
+    },
+    {
+      "name": "ENV_VARIABLE_VALUE",
+      "type": "text",
+      "required": true,
+      "placeholder": "Enter variable value",
+      defaultValue: "",
+      currentValue: ""
+    },
+    {
+      "name": "ENV_VARIABLE_TYPE",
+      "type": "select",
+      "options": ["string", "number", "boolean"],
+      "required": true,
+      "placeholder": "Select variable type",
+      defaultValue: "",
+      currentValue: ""
+    }
+    // Add more fields as needed
+  ]
+}
+
