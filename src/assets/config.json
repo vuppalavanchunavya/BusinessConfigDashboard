@@ -10,11 +10,15 @@
         },
         {
             "name": "NODE_ENV",
-            "type": "text",
+            "type": "select",
             "required": true,
             "defaultValue": "development",
             "currentValue": "development",
-            "description": "The environment in which the Node.js server is running."
+            "description": "The environment in which the Node.js server is running.",
+            "options": [
+                "development",
+                "production"
+            ]
         },
         {
             "name": "UV_THREADPOOL_SIZE",
