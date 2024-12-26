@@ -1,0 +1,29 @@
+.env-preview {
+    //   width: 100%;
+      border-top: 1px solid #ccc;
+      padding: 10px;
+      background-color: #f7f7f7;
+    //   resize: vertical;
+      overflow: auto;
+    }
+    
+    .env-preview-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .env-preview-actions {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .env-preview-content {
+      max-height: 300px;
+      overflow: auto;
+    }
+    
+    .collapsed .env-preview-content {
+      display: none;
+    }

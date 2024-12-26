@@ -1,0 +1,9 @@
+<div class="tooltip-container" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <label class="tooltip-label">
+    <ng-content></ng-content>
+  </label>
+  <div class="tooltip-content" [class.show]="show">
+    <div>{{ description }}</div>
+    <div>Default Value: <code>{{ defaultValue }}</code></div>
+  </div>
+</div>

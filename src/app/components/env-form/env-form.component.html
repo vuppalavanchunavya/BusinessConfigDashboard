@@ -1,6 +1,8 @@
-<div class="env-form-container">
-  <h1>ENV File Manager</h1>
+<app-skelton-loader *ngIf="loading"></app-skelton-loader>
 
+<!-- Actual content when not loading -->
+<div *ngIf="!loading">
+  <h1>Business Config Dashboard</h1>
   <form [formGroup]="envForm" (ngSubmit)="onSubmit()" class="env-form">
     <div *ngFor="let group of groupedFields | keyvalue: originalOrder" class="form-group">
       <h3>{{ group.key }}</h3>
@@ -9,18 +11,21 @@
           <div *ngFor="let field of group.value" class="form-field">
             <div class="field-name-container">
               <app-tooltip [description]="field.description" [defaultValue]="field.defaultValue">
-                {{ field.name }}
+                {{ field.modificationName }}
               </app-tooltip>
             </div>
-
             <div class="form-control-container">
-              <!-- Editable input or select -->
               <ng-container [ngSwitch]="field.type">
-                <input *ngSwitchCase="'text'" [id]="field.name + '_editable'" [formControlName]="field.name" [type]="field.type" [required]="field.required"
-                  [placeholder]="field.placeholder" class="form-control">
-                <input *ngSwitchCase="'number'" [id]="field.name + '_editable'" [formControlName]="field.name" [type]="field.type" [required]="field.required"
-                  [placeholder]="field.placeholder" class="form-control">
-                <select *ngSwitchCase="'select'" [id]="field.name + '_editable'" [formControlName]="field.name" [required]="field.required" class="form-control">
+                <input *ngSwitchCase="'text'" [id]="field.name + '_editable'" [formControlName]="field.name"
+                  [type]="field.type" [required]="field.required" [placeholder]="field.placeholder"
+                  class="form-control">
+
+                <input *ngSwitchCase="'number'" [id]="field.name + '_editable'" [formControlName]="field.name"
+                  [type]="field.type" [required]="field.required" [placeholder]="field.placeholder"
+                  class="form-control">
+
+                <select *ngSwitchCase="'select'" [id]="field.name + '_editable'" [formControlName]="field.name"
+                  [required]="field.required" class="form-control">
                   <option *ngFor="let option of field.options" [value]="option">
                     {{ option }}
                   </option>
@@ -32,9 +37,7 @@
         </ng-container>
       </div>
     </div>
-
     <button type="submit" class="btn btn-primary">Save Configuration</button>
   </form>
-
-  <app-env-preview [content]="envForm.value"></app-env-preview>
+  <app-env-preview [content]="envFormPreview"></app-env-preview>
 </div>

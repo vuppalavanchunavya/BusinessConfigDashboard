@@ -1,0 +1,12 @@
+<div class="env-preview" [class.collapsed]="collapsed">
+  <div class="env-preview-header">
+    <span (click)="toggleCollapse()">Preview ENV content</span>
+    <div class="env-preview-actions">
+      <button (click)="copyToClipboard()">Copy</button>
+      <button (click)="toggleCollapse()">{{ collapsed ? 'Expand' : 'Collapse' }}</button>
+    </div>
+  </div>
+  <div class="env-preview-content" *ngIf="!collapsed">
+    <pre>{{ jsonToEnv(content) }}</pre>
+  </div>
+</div>
