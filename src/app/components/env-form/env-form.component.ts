@@ -17,6 +17,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { SkeltonLoaderComponent } from '../skelton-loader/skelton-loader.component';
 import { referenceConfig } from '../../ebs_config';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { referenceCloudConfig } from '../../cloud_config';
 
 
 @Component({
@@ -129,49 +130,31 @@ export class EnvFormComponent {
       this.loading = false;
       return;
     }
-    const description = this.configService.description;
-    const CLOUD_CONFIG = Object.entries(getBusinessConfigCloud).map(([key, value], index) => {
-      const options: string[] = [];
-      let type: string = 'string';
-      if (typeof value === 'boolean') {
-        options.push(
-          "true",
-          "false"
-        );
-        type = 'select';
-      };
-      if (typeof value === 'number') {
-        type = 'number';
-      } if (typeof value === 'string') {
-        type = 'text';
-      } if (typeof value === 'object' && value !== null && Array.isArray(value)) {
-        options.push(...(value as any[]));
-        type = 'select';
-
-      }
-      if (typeof value === 'object' && value !== null && !Array.isArray(value)) {
-        const config = Object.entries(value).map(([key, value]) => {
-          return ([
-            [`${key}:`], value
-          ])
-        });
-        options.push(...config as any[]);
-        type = 'select';
-
-
-      }
-      return ({
+    const CLOUD_CONFIG: any = Object.entries(getBusinessConfigCloud).map(([key, value]: any) => {
+      return {
+        modificationName: key,
         name: key,
-        defaultValue: typeof value === 'object' ? 'select' : value,
-        required: true,
-        currentValue: typeof value === 'object' ? 'select' : value,
-        options: options,
-        type: type,
-        description: description[index]
-      });
+        defaultValue: value,
+        currentValue: Array.isArray(value) || Object.entries(value).length ? key : value
+      };
     });
-    this.groupedFields = { CLOUD_CONFIG };
-    this.envForm = this.fb.group(this.createFormGroup({ CLOUD_CONFIG }));
+
+    const updatedCloudConfig = CLOUD_CONFIG.map((item: any) => {
+      const matchedConfig: any = referenceCloudConfig.find(ref => ref.name === item.modificationName);
+      if (Object.entries(matchedConfig).length) {
+        item.modificationName = matchedConfig?.defaultName;
+        item.type = matchedConfig?.type;
+        item.required = matchedConfig.required;
+        item.description = matchedConfig.description;
+        item.options = matchedConfig.options || [];
+      }
+      return item;
+
+    });
+
+
+    this.groupedFields = { CLOUD_CONFIG: updatedCloudConfig };
+    this.envForm = this.fb.group(this.createFormGroup({ CLOUD_CONFIG: updatedCloudConfig }));
     this.envFormPreview = this.envForm.value;
     this.loading = false;
 

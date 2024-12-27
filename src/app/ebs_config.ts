@@ -3,7 +3,7 @@ export const referenceConfig = [
         "name": "isEnableRealTimeSync",
         "type": "select",
         "required": true,
-        "description": "Enable real-time transactions.",
+        "description": "Enable real-time transactions",
         "options": [
             "true",
             "false"
@@ -14,7 +14,7 @@ export const referenceConfig = [
         "name": "isEnableDebugMode",
         "type": "select",
         "required": true,
-        "description": "Enable debug mode for the application.",
+        "description": "Enable debug mode for the application",
         "options": [
             "true",
             "false"
@@ -25,14 +25,14 @@ export const referenceConfig = [
         "name": "apiRefresherTimeInterval",
         "type": "number",
         "required": true,
-        "description": "Time interval for real-time sync (in minutes).",
+        "description": "Time interval for real-time sync (in minutes)",
         "defaultName": "Refresher Time Interval"
     },
     {
         "name": "apiTransDataRefresherTimeInterval",
         "type": "number",
         "required": true,
-        "description": "Interval (in minutes) for auto-refresh of transactional data.",
+        "description": "Interval (in minutes) for auto-refresh of transactional data",
         "defaultName": "Transaction Data Refresher Time Interval"
     },
     {
@@ -50,7 +50,7 @@ export const referenceConfig = [
         "name": "isEnableUOMConversionField",
         "type": "select",
         "required": true,
-        "description": "Enable UOM conversion field.",
+        "description": "Enable UOM conversion field",
         "options": [
             "true",
             "false"
@@ -61,7 +61,7 @@ export const referenceConfig = [
         "name": "isManualMode",
         "type": "select",
         "required": true,
-        "description": "Enable manual scanning.",
+        "description": "Enable manual scanning",
         "options": [
             "true",
             "false"
@@ -73,7 +73,7 @@ export const referenceConfig = [
         "name": "isEnableMultiLotsSerial",
         "type": "select",
         "required": true,
-        "description": "Enable multi-lot and serial management.",
+        "description": "Enable multi-lot and serial management",
         "options": [
             "true",
             "false"
@@ -84,14 +84,14 @@ export const referenceConfig = [
         "name": "initialAPILoadInterval",
         "type": "number",
         "required": true,
-        "description": "API load interval in days.",
+        "description": "API load interval in days",
         "defaultName": "Api Load Interval"
     },
     {
         "name": "isEnableBackDirectOrgTransfer",
         "type": "select",
         "required": true,
-        "description": "Enable back direct org transfer.",
+        "description": "Enable back direct org transfer",
         "options": [
             "true",
             "false"
@@ -102,7 +102,7 @@ export const referenceConfig = [
         "name": "isEnableFIFOSuggestion",
         "type": "select",
         "required": true,
-        "description": "Enable FIFO serial suggestions.",
+        "description": "Enable FIFO serial suggestions",
         "options": [
             "true",
             "false"
@@ -113,7 +113,7 @@ export const referenceConfig = [
         "name": "isLocatorControlled",
         "type": "select",
         "required": true,
-        "description": "Enable locator-controlled inventory.",
+        "description": "Enable locator-controlled inventory",
         "options": [
             "true",
             "false"
@@ -124,14 +124,14 @@ export const referenceConfig = [
         "name": "apiResponseTimeOut",
         "type": "number",
         "required": true,
-        "description": "API call timeout in milliseconds.",
+        "description": "API call timeout in milliseconds",
         "defaultName": "Api Response Time Out"
     },
     {
         "name": "isIdleFeatureNeeded",
         "type": "select",
         "required": true,
-        "description": "Enable app idle alert.",
+        "description": "Enable app idle alert",
         "options": [
             "true",
             "false"
@@ -178,7 +178,7 @@ export const referenceConfig = [
         "name": "isAutofocusNeededAtLogin",
         "type": "select",
         "required": true,
-        "description": "Enable QR scan at login.",
+        "description": "Enable QR scan at login",
         "options": [
             "true",
             "false"
@@ -189,7 +189,7 @@ export const referenceConfig = [
         "name": "isSkipScanningForOneItem",
         "type": "select",
         "required": true,
-        "description": "Skip scanning for one item in modules.",
+        "description": "Skip scanning for one item in modules",
         "options": [
             "true",
             "false"
@@ -200,7 +200,7 @@ export const referenceConfig = [
         "name": "isConsolidateReceipts",
         "type": "select",
         "required": true,
-        "description": "Enable receipt consolidation in goods receipt.",
+        "description": "Enable receipt consolidation in goods receipt",
         "options": [
             "true",
             "false"
@@ -211,7 +211,7 @@ export const referenceConfig = [
         "name": "isSSOLogin",
         "type": "select",
         "required": true,
-        "description": "Enable SSO for production login.",
+        "description": "Enable SSO for production login",
         "options": [
             "true",
             "false"
@@ -222,7 +222,7 @@ export const referenceConfig = [
         "name": "isURLChangeNeeded",
         "type": "select",
         "required": true,
-        "description": "Enable base URL change.",
+        "description": "Enable base URL change",
         "options": [
             "true",
             "false"
@@ -233,7 +233,7 @@ export const referenceConfig = [
         "name": "loadAllInvOrg",
         "type": "select",
         "required": true,
-        "description": "loads all inventory organizations",
+        "description": "Loads all inventory organizations",
         "options": [
             "true",
             "false"
@@ -299,7 +299,7 @@ export const referenceConfig = [
         "name": "isUnlockItemNeeded",
         "type": "select",
         "required": true,
-        "description": "Enable item unlocking.",
+        "description": "Enable item unlocking",
         "options": [
             "true",
             "false"
@@ -310,7 +310,7 @@ export const referenceConfig = [
         "name": "txnDeletionDay",
         "type": "number",
         "required": true,
-        "description": "Transaction deletion period (in days).",
+        "description": "Transaction deletion period (in days)",
         "defaultName": "txn Deletion Day"
     },
     {
@@ -328,7 +328,7 @@ export const referenceConfig = [
         "name": "disableLogs",
         "type": "select",
         "required": true,
-        "description": "Disable logging.",
+        "description": "Disable logging",
         "options": [
             "true",
             "false"
@@ -361,7 +361,7 @@ export const referenceConfig = [
         "name": "isKeyboardRequiredOnInputTap",
         "type": "select",
         "required": true,
-        "description": "Enable keyboard visibility on input tap.",
+        "description": "Enable keyboard visibility on input tap",
         "options": [
             "true",
             "false"
@@ -372,7 +372,7 @@ export const referenceConfig = [
         "name": "queryLimitSize",
         "type": "number",
         "required": true,
-        "description": "Maximum number of query results.",
+        "description": "Maximum number of query results",
         "defaultName": "Query Limit"
     },
     {
@@ -390,7 +390,7 @@ export const referenceConfig = [
         "name": "isNeededPeriodValidations",
         "type": "select",
         "required": true,
-        "description": "Enable period validation.",
+        "description": "Enable period validation",
         "options": [
             "true",
             "false"
@@ -401,7 +401,7 @@ export const referenceConfig = [
         "name": "isTransactionHistoryDeleting",
         "type": "select",
         "required": true,
-        "description": "Enable transaction history deletion.",
+        "description": "Enable transaction history deletion",
         "options": [
             "true",
             "false"
@@ -412,7 +412,7 @@ export const referenceConfig = [
         "name": "isEnableAppStarter",
         "type": "select",
         "required": true,
-        "description": "Initialize app root page.",
+        "description": "Initialize app root page",
         "options": [
             "true",
             "false"
@@ -423,7 +423,7 @@ export const referenceConfig = [
         "name": "isApkChangeLogsPageAvailable",
         "type": "select",
         "required": true,
-        "description": "Enable viewing APK version logs.",
+        "description": "Enable viewing APK version logs",
         "options": [
             "true",
             "false"
@@ -434,7 +434,7 @@ export const referenceConfig = [
         "name": "isEncryptedDb",
         "type": "select",
         "required": true,
-        "description": "Enable encrypted database.",
+        "description": "Enable encrypted database",
         "options": [
             "true",
             "false"
@@ -445,14 +445,14 @@ export const referenceConfig = [
         "name": "encryptKey",
         "type": "text",
         "required": true,
-        "description": "Key for data encryption.",
+        "description": "Key for data encryption",
         "defaultName": "Encrypt Key"
     },
     {
         "name": "isEnableSSLpinning",
         "type": "select",
         "required": true,
-        "description": "Enable SSL certificate pinning.",
+        "description": "Enable SSL certificate pinning",
         "options": [
             "true",
             "false"
@@ -463,7 +463,7 @@ export const referenceConfig = [
         "name": "isDebugMode",
         "type": "select",
         "required": true,
-        "description": "Enable debug logging for API requests.",
+        "description": "Enable debug logging for API requests",
         "options": [
             "true",
             "false"
@@ -474,7 +474,7 @@ export const referenceConfig = [
         "name": "checkRootedAndroidDevice",
         "type": "select",
         "required": true,
-        "description": "Enable root device check.",
+        "description": "Enable root device check",
         "options": [
             "true",
             "false"
@@ -485,14 +485,14 @@ export const referenceConfig = [
         "name": "csvPrimaryKeySperator",
         "type": "text",
         "required": true,
-        "description": "separator for CSV key formatting",
+        "description": "Separator for CSV key formatting",
         "defaultName": "CSV PrimaryKey Seperator"
     },
     {
         "name": "changeLanguageOptionsAvailable",
         "type": "select",
         "required": true,
-        "description": "shows if language change options are available",
+        "description": "Shows if language change options are available",
         "options": [
             "true",
             "false"
@@ -503,7 +503,7 @@ export const referenceConfig = [
         "name": "defaultAppLanguage",
         "type": "text",
         "required": true,
-        "description": "specifies the default language for the app",
+        "description": "Specifies the default language for the app",
         "defaultName": "Default App Language"
     },
     {
@@ -521,7 +521,7 @@ export const referenceConfig = [
         "name": "isPackingDoneBeforePicking",
         "type": "select",
         "required": true,
-        "description": "Determines whether to call `getSalesOrdersForPacking` (false) or `getSalesOrdersForPicking` (true) in the SO PACK tile.",
+        "description": "Determines whether to call `getSalesOrdersForPacking` (false) or `getSalesOrdersForPicking` (true) in the SO PACK tile",
         "options": [
             "true",
             "false"
@@ -543,7 +543,7 @@ export const referenceConfig = [
         "name": "encryptSecurityKey",
         "type": "text",
         "required": true,
-        "description": "key used for encrypting data",
+        "description": "Key used for encrypting data",
         "defaultName": "Encrypt Security Key"
     },
     {
@@ -572,7 +572,7 @@ export const referenceConfig = [
         "name": "enableSerialValidationForPackTile",
         "type": "select",
         "required": true,
-        "description": "Enables serial validation at the DeliveryId level.",
+        "description": "Enables serial validation at the DeliveryId level",
         "options": [
             "true",
             "false"
@@ -583,7 +583,7 @@ export const referenceConfig = [
         "name": "enableSerialValidationForPackTileAtDeliveryLevel",
         "type": "select",
         "required": true,
-        "description": "Enables serial validation at the DeliveryLineId level.",
+        "description": "Enables serial validation at the DeliveryLineId level",
         "options": [
             "true",
             "false"
@@ -594,7 +594,7 @@ export const referenceConfig = [
         "name": "loadUnscheduledFromItemsTable",
         "type": "select",
         "required": true,
-        "description": "controls loading unscheduled items",
+        "description": "Controls loading unscheduled items",
         "options": [
             "true",
             "false"
@@ -605,7 +605,7 @@ export const referenceConfig = [
         "name": "copyReqId",
         "type": "select",
         "required": true,
-        "description": "Enables serial validation at the DeliveryLineId level.",
+        "description": "Enables serial validation at the DeliveryLineId level",
         "options": [
             "true",
             "false"
@@ -616,7 +616,7 @@ export const referenceConfig = [
         "name": "reqIdDelimiter",
         "type": "text",
         "required": true,
-        "description": "Delimiter used to separate the message and request ID.",
+        "description": "Delimiter used to separate the message and request ID",
         "defaultName": "ReqId Delimiter"
 
     },
